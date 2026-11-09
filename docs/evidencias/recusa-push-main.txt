@@ -1,0 +1,11 @@
+Aula 1 - evidência real de recusa de push direto na main
+Comando executado: git push origin HEAD:main
+Data local: 2026-11-09 20:12:23 -0300
+Código de saída: 1
+
+remote: error: GH006: Protected branch update failed for refs/heads/main.        
+remote: 
+remote: - Changes must be made through a pull request.        
+To https://github.com/NicolasFrancisco017/conecta-voluntarios.git
+ ! [remote rejected] HEAD -> main (protected branch hook declined)
+error: failed to push some refs to 'https://github.com/NicolasFrancisco017/conecta-voluntarios.git'
