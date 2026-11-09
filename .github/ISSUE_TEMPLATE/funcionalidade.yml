@@ -1,0 +1,28 @@
+name: Nova funcionalidade
+description: Sugira uma melhoria no projeto.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: necessidade
+    attributes:
+      label: Necessidade
+      description: Qual problema deve ser resolvido?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Interface Web
+        - Regras de negócio
+        - Testes
+        - DevOps / Documentação
+    validations:
+      required: true
+  - type: textarea
+    id: aceite
+    attributes:
+      label: Critérios de aceite
+      description: O que precisa funcionar para concluir a tarefa?

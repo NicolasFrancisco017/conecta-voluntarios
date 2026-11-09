@@ -1,0 +1,26 @@
+name: CI - testes e qualidade
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  testes:
+    name: testes-node
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Instalar com lockfile
+        run: npm ci
+      - name: Verificação sintática
+        run: npm run check
+      - name: Executar testes
+        run: npm test

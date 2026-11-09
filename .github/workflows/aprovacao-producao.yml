@@ -1,0 +1,19 @@
+name: Demonstracao - aprovacao de ambientes
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  staging:
+    name: verificar-staging
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: echo "Validação de staging concluída. (Simulação acadêmica; sem deploy real.)"
+  production:
+    name: aprovar-production
+    needs: staging
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: echo "Aprovação de produção obtida. (Simulação acadêmica; sem deploy real.)"

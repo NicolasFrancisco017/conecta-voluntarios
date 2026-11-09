@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#132c2e" />
+    <meta name="description" content="Projeto acadêmico demonstrativo para conectar pessoas a oportunidades de voluntariado." />
+    <title>Conecta Voluntários | Projeto GCS</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/src/main.mjs"></script>
+  </head>
+  <body>
+    <header class="barra">
+      <div class="container barra-interna">
+        <a class="marca" href="#inicio" aria-label="Conecta Voluntários, início"><span class="marca-icone">✦</span> conecta<span>voluntários</span></a>
+        <a class="nav-link" href="#cadastro">Participar <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="container hero-interior">
+          <p class="sobretitulo"><span class="ponto"></span> PROJETO ACADÊMICO · GCS / DEVOPS</p>
+          <h1>Pequenas ações.<br /><em>Grandes mudanças.</em></h1>
+          <p class="hero-texto">Descubra oportunidades de voluntariado e registre seu interesse de forma simples. Uma demonstração de software com Git, testes e controle de mudanças.</p>
+          <a href="#oportunidades-titulo" class="botao-principal">Explorar oportunidades <span aria-hidden="true">→</span></a>
+          <div class="hero-estatisticas"><div><strong>03</strong><span>Oportunidades</span></div><div><strong id="total-inscritos">0</strong><span>Inscrições locais</span></div><div><strong>100%</strong><span>Demo acadêmica</span></div></div>
+        </div>
+      </section>
+
+      <section class="secao container" aria-labelledby="oportunidades-titulo">
+        <div class="secao-cabecalho"><div><p class="sobretitulo escuro">ENCONTRE SEU PROPÓSITO</p><h2 id="oportunidades-titulo">Oportunidades disponíveis</h2><p class="descricao">Escolha uma atividade que combine com você.</p></div><label class="busca"><span aria-hidden="true">⌕</span><input id="pesquisa" type="search" placeholder="Buscar oportunidade" aria-label="Buscar oportunidade" /></label></div>
+        <div id="oportunidades" class="grade-cards"></div>
+      </section>
+
+      <section class="secao secao-inferior" id="cadastro">
+        <div class="container grade-formulario">
+          <div><p class="sobretitulo escuro">TRANSFORME INTENÇÃO EM AÇÃO</p><h2>Faça parte dessa ideia</h2><p class="descricao">Cadastre uma inscrição de demonstração. Seus dados ficam somente no navegador e não são enviados para nenhum servidor.</p><div class="aviso"><strong>Privacidade em primeiro lugar.</strong><p>Este protótipo não representa uma ONG real. Não informe dados sensíveis.</p></div></div>
+          <div class="painel"><h3>Registrar interesse</h3><form id="form-inscricao"><label for="nome">Seu nome</label><input id="nome" name="nome" placeholder="Ex.: Ana Maria" minlength="2" maxlength="60" required /><label for="oportunidade">Escolha uma atividade</label><select id="oportunidade" name="oportunidade" required><option value="">Selecione uma atividade</option></select><button class="botao-principal largura-total" type="submit">Registrar inscrição <span aria-hidden="true">→</span></button><p id="mensagem" class="mensagem" role="status" aria-live="polite"></p></form></div>
+        </div>
+      </section>
+
+      <section class="secao container" aria-labelledby="inscricoes-titulo"><div class="secao-cabecalho"><div><p class="sobretitulo escuro">REGISTROS NO DISPOSITIVO</p><h2 id="inscricoes-titulo">Inscrições cadastradas</h2></div></div><ul id="inscricoes" class="lista-inscricoes"></ul></section>
+    </main>
+    <footer class="rodape"><div class="container"><span>✦ conecta<span class="rodape-claro">voluntários</span></span><span>Exercício acadêmico · Plano de GCS · 2026</span></div></footer>
+  </body>
+</html>

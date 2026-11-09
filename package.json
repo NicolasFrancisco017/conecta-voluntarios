@@ -1,0 +1,13 @@
+{
+  "name": "conecta-voluntarios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicação demonstrativa de oportunidades de voluntariado para a Aula 1 de GCS/DevOps.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check src/core.mjs && node --check src/main.mjs"
+  }
+}
